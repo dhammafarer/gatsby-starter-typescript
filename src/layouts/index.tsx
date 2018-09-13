@@ -1,14 +1,11 @@
-import * as React from 'react'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
+import * as React from 'react';
+import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
+import Header from '../components/Header';
+import Toolbar from '@material-ui/core/Toolbar';
+import withRoot from '../utils/withRoot';
 
 import './index.css'
-
-const Header = () => (
-  <div>
-    Header
-  </div>
-)
 
 interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {
   location: {
@@ -47,4 +44,4 @@ class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
   }
 }
 
-export default DefaultLayout
+export default withRoot(DefaultLayout)
